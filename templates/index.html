@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+</head>
+<body>
+    <h1>Yarımkeçirici elementlər</h1>
+    <div class="articles">
+        <h2>Articles: </h2>
+        <ul> 
+            {% for article in articles %}
+                <li>
+                    <h3>{{article.author}}</h3>
+                    <h4>{{article.title}}</h4>
+                    <p>{{article.content}}</p>
+                    <small>{{article.create_date}}</small>
+                    <img src=../Media/{{article.image}} alt="">
+                </li>
+                <hr>
+            {% endfor %}
+                
+        </ul>
+    </div>
+
+</body>
+</html>
