@@ -1,3 +1,31 @@
 body{
-    background-color: teal;
+    background-color: rgb(241, 229, 188);
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+
+li{
+    list-style: none;
+}
+
+h2{
+    padding-left: 40px;
+}
+
+p{
+    width: 800px;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+small{
+    color:red
 }
