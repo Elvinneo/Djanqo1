@@ -5,6 +5,6 @@ class Article(models.Model):
     title=models.CharField(max_length=20,verbose_name="Basliq")
     content=models.TextField(verbose_name="Kontent")
     create_date=models.DateTimeField(auto_now_add=True,verbose_name="Yaradilma tarixi")
-    image=models.FileField(null=True,blank=True)
+    image=models.FileField(null=True,blank=True,verbose_name='Sekil')
     def __str__(self):
         return self.title

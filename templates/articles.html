@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+
+{% block page__title %}
+    Blogs
+{% endblock page__title %}
+
+
+{% block body %}
+    <h2>Məqalələr</h2>
+    <div class="articles">
+        <ul> 
+            {% for article in articles %}
+                <li>
+                    <h3>{{article.author}}</h3>
+                    <h4>{{article.title}}</h4>
+                    <p>{{article.content}}</p>
+                    <small>{{article.create_date}}</small>
+                    <img class="items" src=../Media/{{article.image}} alt="">
+                </li>
+                <hr>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock body %}
+
+
+
+
+
+
+
