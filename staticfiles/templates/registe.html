@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block page__title %}
+Qeydiyyat
+{% endblock page__title %}
+
+{% block body %}
+    <h2>Qeydiyyat sehifesi</h2>
+    
+    <form method="post">
+        {%csrf_token%}
+        <div class="form_group">
+            <label for="{{form.username.id_for_label}}">Ad</label>
+            {{form.first_name}}
+        </div>
+        <div class="form_group">
+            <label for="{{form.username.id_for_label}}">Soyad</label>
+            {{form.last_name}}
+        </div>
+        <div class="form_group">
+            <label for="{{form.username.id_for_label}}">Elektron poçt</label>
+            {{form.email}}
+        </div>
+        <div class="form_group">
+            <label for="{{form.username.id_for_label}}">İstifadəçi adı</label>
+            {{form.username}}
+        </div>
+        <div class="form_group">
+            <label for="{{form.username.id_for_label}}">Şifrə</label>
+            {{form.password}}
+        </div>
+        <div class="form_group">
+            <label for="{{form.confirm.id_for_label}}">Təkar şifrə</label>
+            {{form.confirm}}
+        </div>
+        <button class="btn">Qeydiyyat</button>
+    </form>
+    
+
+
+{% endblock body %}
+

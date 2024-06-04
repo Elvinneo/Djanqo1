@@ -1,0 +1,22 @@
+
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+    {%if messages %}
+        {%for message in messages %}
+     
+            {%if message.tags == 'warning' %}
+                <div class="warning">{{message}}</div>
+            {%else%}
+                <div class="success">{{message}}</div>
+            {%endif %}
+        {% endfor %}
+    {%endif%}
+
+{% endblock body %}
+
+
+

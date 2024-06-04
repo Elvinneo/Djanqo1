@@ -37,6 +37,8 @@
                     <p>{{article.content|truncatechars:30}}</p>
                     <small>{{article.create_date}}</small>
                     <img class="items" src="../Media/{{article.image}}" alt="">
+                    <a class='duyme' href="{% url 'update' article.id %}"><i class="fa-solid fa-pen-nib"></i></a>
+                    <a class='duyme' href="{% url 'delete' article.id %}"><i class="fa-solid fa-trash"></i></a>
                 </li>
                 <hr>
             {% endfor %}

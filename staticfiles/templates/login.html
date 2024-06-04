@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block page__title %}
+        Giriş
+{% endblock page__title %}
+
+{% block body %}
+<h2>Giris sehifesi</h2>
+<form method="post">
+        {%csrf_token%}
+        <div class="form_group">
+                <label for="{{form.username.id_for_label}}">İstifadəçi adı</label>
+                {{form.username}}
+        </div>
+        <div class="form_group">
+                <label for="{{form.username.id_for_label}}">Şifrə</label>
+                {{form.password}}
+        </div>
+
+        <button class="btn">Daxil ol</button>
+</form>
+    
+{% endblock body %}
+

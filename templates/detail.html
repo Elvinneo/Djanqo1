@@ -14,9 +14,12 @@
             <li>
                 <h3>{{article.author}}</h3>
                 <h4>{{article.title}}</h4>
-                <p>{{article.content}}</p>
+                <p>{{article.content|safe}}</p>
                 <small>{{article.create_date}}</small>
-                <img class="items" src="../Media/{{article.image}}" alt="">
+                {% if article.image %}
+                    <img class="items" src="../Media/{{article.image}}" alt="">
+                {%endif%}
+                
             </li>
             <hr>
         </ul>
