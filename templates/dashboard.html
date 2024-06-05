@@ -34,7 +34,7 @@
                 <li>
                     <h3>{{article.author}}</h3>
                     <h4><a href="{% url 'detail' article.id %}">{{article.title}}</a></h4>
-                    <p>{{article.content|truncatechars:30}}</p>
+                    <p>{{article.content|safe|truncatechars:30}}</p>
                     <small>{{article.create_date}}</small>
                     <img class="items" src="../Media/{{article.image}}" alt="">
                     <a class='duyme' href="{% url 'update' article.id %}"><i class="fa-solid fa-pen-nib"></i></a>

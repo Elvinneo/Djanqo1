@@ -24,4 +24,35 @@
             <hr>
         </ul>
     </div>
+    <div class="comments">
+        <h2>Şərhlər</h2>
+        {% if comments%}
+            {%for comment in comments%}
+            <div class="comment">
+                <h3>{{comment.comment_author}} terefinden yazildi</h3>
+                <h3>{{comment.comment_content}} </h3>
+            </div>
+            <hr>
+            {%endfor%}
+                
+            {%else%}
+            messages.success(request,"Şərh yoxdur")
+        
+        {%endif%}
+    
+        <div class="comment_form">
+            <form action='{% url "comment" article.id %}'  method="POST">
+                {%csrf_token%}
+                <div class="form_group">
+                    <label for="comment_author">Ad</label>
+                    <input type="text" name="comment_author" placeholder="Adinizi daxil edin.."id='comment_author'>
+                </div>
+                <div class="form_group">
+                    <label for="comment_author">Şərh</label>
+                    <textarea  type="text" name="comment_content" placeholder="Şərhinizi daxil edin.."id='comment_content'></textarea>
+                </div>
+                <button class="btn" type="submit">Gonder</button>
+            </form>
+        </div>
+    </div>
 {% endblock body %}

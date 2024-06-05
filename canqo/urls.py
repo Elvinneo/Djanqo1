@@ -14,6 +14,7 @@ urlpatterns = [
     path('articles/',articles__view,name='articles'),
     path('addarticle/',add__article__view,name='addarticle'),
     path('update/<int:id>',article__update__view,name='update'),
+    path('comment/<int:id>',addcomment__view,name='comment'),
     path('delete/<int:id>',article__delete__view,name='delete'),
     path('detail/<int:id>',detail__view,name='detail'),
     path('dashboard/',dashboard__view,name='dashboard'),

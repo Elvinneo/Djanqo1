@@ -43,7 +43,7 @@ small{
     background-color: brown;
 
 }
-a{
+.links ul li a{
     text-decoration: none;
     color: white;
 }
